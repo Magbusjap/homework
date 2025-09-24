@@ -1,0 +1,13 @@
+Название меняется по ходу прохождения уроков:
+
+<title>HTML lesson 1</title>
+<title>HTML lesson 2</title>
+<title>HTML lesson 3</title>
+
+<div></div> - блочный тег
+<span></span> - строчный тег
+<br> - перенос строки
+
+Shift + Alt + Стрелка вниз/вверх - дублирование строки
+Ctrl + / - комментирование строки
+
