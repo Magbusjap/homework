@@ -1,0 +1,44 @@
+.personal-data {
+	background-color: blanchedalmond;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: block;
+	gap: 8px 12px;
+	max-width: 360px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.personal-data input,
+.personal-data textarea {
+	width: 80%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	margin-top: 3px;
+	padding: 2px;
+}
+
+label {
+	font-size: 1em;
+	display: block;
+	margin-bottom: 10px;
+}
+
+label input,
+label textarea {
+	display: block;
+}
+
+label input[type="checkbox"] {
+	display: inline;
+	width: auto;
+}
+
+button {
+	margin-top: 10px;
+	padding: 8px 16px;
+	border: 0.5px solid #8d8d8d;
+	border-radius: 5px;
+	cursor: pointer;
+}

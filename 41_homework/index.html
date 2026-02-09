@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Домашнее задание: Стилизация формы</title>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<form class="personal-data">
+			<h2>Ваши личные данные</h2>
+			<label>
+				Ваше имя:
+				<input
+					type="text"
+					name="name"
+					placeholder="Имя (обязательно)"
+					required
+				/>
+			</label>
+			<label>
+				Ваш возраст:
+				<input
+					type="number"
+					name="age"
+					min="0"
+					max="120"
+					placeholder="Возраст (обязательно)"
+					required
+				/>
+			</label>
+			<label>
+				Ваш номер телефона:
+				<input type="tel" name="phone" placeholder="Номер телефона" />
+			</label>
+			<label>
+				Ваша почта:
+				<input
+					type="email"
+					name="email"
+					placeholder="Почта (обязательно)"
+					required
+				/>
+			</label>
+			<label>
+				Сообщение:
+				<textarea name="message" placeholder="Ваше сообщение"></textarea>
+			</label>
+
+			<label class="rules">
+				<input type="checkbox" name="rules" required />
+				Я принимаю правила
+			</label>
+
+			<button type="submit">Отправить</button>
+		</form>
+	</body>
+</html>
