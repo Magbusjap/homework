@@ -10,13 +10,6 @@ body * {
 	padding-top: 15px;
 }
 
-.line {
-	max-width: 1320px;
-	height: 1px;
-	color: #616b6ac7;
-	justify-content: center;
-}
-
 .container {
 	max-width: 1320px;
 	margin: 0 auto;
@@ -27,7 +20,8 @@ body * {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #d3cbd9;
 }
 
 .logo {
