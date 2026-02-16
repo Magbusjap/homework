@@ -6,6 +6,16 @@ body * {
 	box-sizing: border-box;
 }
 
+ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 16px;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
 .header {
 	padding-top: 15px;
 }
@@ -31,12 +41,12 @@ body * {
 	background: #000000;
 }
 
-.menu {
+/* .menu {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	gap: 16px;
-}
+} */
 
 .number {
 	justify-content: right;
