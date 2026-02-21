@@ -1,0 +1,137 @@
+html {
+	font-family: sans-serif;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 10px 20px 40px 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.personal-data {
+	background-color: #ffebcd;
+	color: #291800;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	display: block;
+	gap: 8px 12px;
+	max-width: 400px;
+	width: 100%;
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+}
+
+.personal-data input:not([type="checkbox"]),
+.personal-data textarea {
+	width: 100%;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+	margin-top: 7px;
+	padding: 2px;
+}
+
+.personal-data-title {
+	font-size: 1em;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+.personal-data-fieldset {
+	border: none;
+	padding: 0;
+}
+
+.textarea {
+	max-height: 150px;
+	min-height: 30px;
+	resize: vertical;
+}
+
+.label {
+	font-size: 1em;
+	display: block;
+	margin-bottom: 15px;
+}
+
+.label input,
+.label textarea {
+	display: block;
+}
+
+.checkbox {
+	display: inline-block;
+	position: absolute;
+	appearance: none;
+}
+
+.checkbox:focus-visible {
+	outline: none;
+}
+
+.checkbox::after {
+	content: "";
+	position: absolute;
+	padding-top: 2px;
+	width: 15px;
+	height: 13px;
+	border: 1px solid #291800;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.checkbox:checked::after {
+	background: url(../images/check-square-icon.svg) no-repeat center / contain;
+}
+
+.checkbox-text {
+	padding-left: 22px;
+}
+
+/* .message {
+	height: 100px;
+} */
+
+.submit {
+	border: none;
+	margin-top: 3px;
+	padding: 6px 16px;
+	border-radius: 5px;
+	background-color: #291800;
+	color: #ffffff;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.submit:not(:disabled):active {
+	background-color: #291800;
+}
+
+.submit:disabled {
+	opacity: 0.7;
+}
+
+.submit:hover {
+	opacity: 0.85;
+}
+
+.submit:active {
+	background-color: #880202;
+}
+
+input:focus-visible,
+.message:focus-visible,
+.checkbox:focus-visible::after,
+.submit:focus,
+.submit:focus-visible {
+	outline: 2px solid #291800;
+	outline-offset: 1px;
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Домашнее задание: Стилизация формы</title>
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<form class="personal-data">
+			<fieldset class="personal-data-fieldset">
+				<legend class="personal-data-title">Регистрация нового аккаунта</legend>
+				<label class="label">
+					Ваш никнейм:
+					<input
+						type="text"
+						name="username"
+						placeholder="Имя пользователя (обязательно)"
+						autocomplete="username"
+						required
+					/>
+				</label>
+				<label class="label">
+					Ваш пароль:
+					<input
+						type="password"
+						name="password"
+						placeholder="Пароль (обязательно)"
+						autocomplete="new-password"
+						required
+					/>
+				</label>
+				<label class="label">
+					Подтвердите пароль
+					<input
+						type="password"
+						name="password"
+						placeholder="Пароль (повторно)"
+						autocomplete="new-password"
+						required
+					/>
+				</label>
+				<label class="label">
+					Ваша почта:
+					<input
+						type="email"
+						name="email"
+						placeholder="Почта (обязательно)"
+						autocomplete="email"
+						required
+					/>
+				</label>
+				<label class="label">
+					Резервная почта:
+					<input
+						type="email"
+						name="email"
+						placeholder="Почта"
+						autocomplete="email"
+					/>
+				</label>
+				<label class="label">
+					Ваш номер телефона:
+					<input
+						type="tel"
+						name="phone"
+						inputmode="tel"
+						placeholder="Номер телефона"
+						autocomplete="tel"
+					/>
+				</label>
+				<label class="label">
+					Секретное слово
+					<textarea
+						type="text"
+						name="secret_word"
+						placeholder="секретное слово"
+						class="message"
+						autocomplete="off"
+					></textarea>
+				</label>
+
+				<label class="label">
+					<input class="checkbox" type="checkbox" name="checkbox" required />
+					<span class="checkbox-text"> Я принимаю правила </span>
+				</label>
+				<button type="submit" class="submit" disabled>Отправить</button>
+			</fieldset>
+		</form>
+	</body>
+</html>
