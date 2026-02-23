@@ -1,0 +1,62 @@
+.header-inner {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid var(--color-stroke);
+	gap: 10px;
+	margin-bottom: 80px;
+}
+
+@media (max-width: 500px) {
+	.header-inner {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 10px;
+		margin: 0 auto;
+	}
+}
+
+/* Логотип */
+.logo_icon {
+	width: 84px;
+	height: 45px;
+}
+
+/*Правая часть header*/
+.phone {
+	font-family: var(--second-family);
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.phone a:hover {
+	color: var(--color-accent);
+	transition: color 0.2s;
+}
+.phone-text {
+	color: var(--color-text-caption);
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	margin-bottom: 8px;
+}
+.phone-link {
+	color: var(--color-text-primary);
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 0.04em;
+}
+
+@media (max-width: 500px) {
+	.phone {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
