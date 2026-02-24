@@ -1,0 +1,144 @@
+html {
+	font-family: var(--second-family), sans-serif;
+	font-weight: 400;
+}
+
+body {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+a,
+button {
+	outline: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.text {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	color: var(--color-text-body);
+}
+
+.button {
+	display: inline-block;
+	padding: 19px 32px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 130%;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	background-color: var(--color-accent);
+	transition: opacity 0.2s ease;
+	transition:
+		opacity 0.2s ease,
+		background-color 0.2s ease;
+}
+
+.button:hover {
+	opacity: 0.85;
+}
+
+.button:not(:disabled):active {
+	background-color: var(--color-accent-active);
+}
+
+.button:disabled {
+	opacity: 0.65;
+	cursor: default;
+}
+
+.section {
+	margin-bottom: 140px;
+}
+
+.title-large {
+	max-width: 596px;
+	margin-bottom: 40px;
+	font-family: var(--font-family), sans-serif;
+	font-weight: 600;
+	font-size: 48px;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: var(--color-text-primary);
+}
+
+.title-medium {
+	font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: var(--color-text-primary);
+}
+
+.text-sub {
+	color: var(--color-text-caption);
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	margin-bottom: 8px;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 1px;
+}
+
+.article-decor::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background-image: url("../images/decor-2.svg");
+	width: 528px;
+	height: 48px;
+}
+
+.article-decor-1::before {
+	top: 100px;
+	left: -350px;
+}
+
+.article-decor-2::before {
+	top: 136px;
+	right: -350px;
+}
