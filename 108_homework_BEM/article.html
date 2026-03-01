@@ -1,256 +1,188 @@
-html {
-	font-family: var(--second-family), sans-serif;
-	font-weight: 400;
-}
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-body {
-	margin: 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	min-width: 375px;
-	min-height: 100vh;
-}
+		<title>Fit Studio - Открытие нового филиала!</title>
 
-*,
-*::before,
-*::after {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-}
+		<link rel="stylesheet" href="./CSS/normalize.css" />
+		<link rel="stylesheet" href="./CSS/fonts.css" />
+		<link rel="stylesheet" href="./CSS/variables.css" />
+		<link rel="stylesheet" href="./CSS/globals.css" />
+		<link rel="stylesheet" href="./CSS/header.css" />
+		<link rel="stylesheet" href="./CSS/footer.css" />
+		<link rel="stylesheet" href="./CSS/article.css" />
+		<link
+			rel="icon"
+			href="images/fitness-free-icon.svg"
+			sizes="128x128"
+			type="image/svg+xml"
+		/>
+	</head>
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	margin: 0;
-}
+	<body class="page page-article">
+		<header class="header">
+			<div class="container header__container">
+				<div class="header__inner">
+					<a class="header__logo logo" href="index.html">
+						<svg
+							class="header__logo-img logo__img logo_icon"
+							aria-hidden="true"
+						>
+							<use href="images/main-logo.svg#icon-svg"></use>
+						</svg>
+					</a>
 
-a {
-	text-decoration: none;
-}
+					<div class="header__phone">
+						<p class="header__phone-text text-sub">
+							Первое посещение бесплатно
+						</p>
+						<a class="header__phone-link" href="tel:+79282822882">
+							+7 (928) 282-28-82
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
 
-img {
-	max-width: 100%;
-	height: auto;
-	-o-object-fit: cover;
-	object-fit: cover;
-}
+		<main class="page__main">
+			<article class="article">
+				<section class="article__section section">
+					<div class="container article__container">
+						<h1 class="article__title title-large">
+							Открытие нового филиала в центре города!
+						</h1>
 
-a,
-button {
-	outline: none;
-}
+						<p class="article__text article__text-margin-bottom">
+							Фитнес клуб «Fit.Studio» рад&nbsp;сообщить об&nbsp;открытии нового
+							филиала в&nbsp;центре города. Новый клуб расположен в&nbsp;удобном
+							месте, рядом с&nbsp;остановками общественного транспорта,
+							что&nbsp;делает его&nbsp;доступным для&nbsp;всех жителей города.
+							Новое просторное помещение оборудовано современными тренажёрами,
+							зонами для&nbsp;групповых занятий и&nbsp;отдыха, а&nbsp;также
+							сауной и&nbsp;бассейном.
+						</p>
 
-ul {
-	padding: 0;
-	padding-top: 20px;
-	margin: 0;
-	list-style: none;
-}
+						<p class="article__text article__margin-bottom">
+							Кроме того, в "FitLife" работают опытные тренеры, которые помогут
+							составить индивидуальную программу тренировок и диеты для
+							достижения желаемых результатов. Клиенты могут также
+							воспользоваться услугами персональных тренировок и консультаций по
+							здоровому образу жизни.
+						</p>
 
-.container {
-	max-width: 1250px;
-	margin: 0 auto;
-	padding: 0 15px;
-}
+						<div class="article__media img-wrap article-decor-1">
+							<img
+								class="article__image article-img article__img"
+								src="./images/gym-img.jpg"
+								width="1220"
+								height="512"
+								alt="Тренажерный зал"
+							/>
+						</div>
+					</div>
+				</section>
 
-/* === LOGO (БЭМ) === */
-.logo__img {
-	width: 84px;
-	height: 45px;
-}
+				<section class="article__section section">
+					<div class="container article__container">
+						<h2 class="article__subtitle title-large">Групповые занятия</h2>
 
-.page-home main {
-	padding-bottom: 140px;
-}
+						<p class="article__text article-text">
+							В&nbsp;новом филиале «Fit.Studio» будут проводиться различные
+							групповые занятия. Каждый клиент сможет подобрать подходящий
+							ему&nbsp;вид занятий и&nbsp;найти комфортную среду
+							для&nbsp;тренировок.
+						</p>
 
-.page-article main {
-	padding-bottom: 120px;
-}
+						<ul class="article__list article__margin-bottom">
+							<li class="article__item">Йога</li>
+							<li class="article__item">Пилатес</li>
+							<li class="article__item">Аэробика</li>
+							<li class="article__item">Танцы</li>
+							<li class="article__item">Силовые тренировки</li>
+						</ul>
+					</div>
+				</section>
 
-.text {
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 130%;
-	color: var(--color-text-body);
-}
+				<section class="article__section section">
+					<div class="container article__container">
+						<h2 class="article__subtitle title-large article-title-medium">
+							Обзор нового филиала
+						</h2>
 
-.button {
-	display: inline-block;
-	padding: 19px 32px;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 130%;
-	letter-spacing: 0.02em;
-	text-transform: uppercase;
-	text-align: center;
-	color: #fff;
-	background-color: var(--color-accent);
-	-webkit-transition: opacity 0.2s ease;
-	-o-transition: opacity 0.2s ease;
-	transition: opacity 0.2s ease;
-	-webkit-transition:
-		opacity 0.2s ease,
-		background-color 0.2s ease;
-	-o-transition:
-		opacity 0.2s ease,
-		background-color 0.2s ease;
-	transition:
-		opacity 0.2s ease,
-		background-color 0.2s ease;
-}
+						<div class="article__media img-wrap">
+							<div class="article__video-wrapper article-decor-2">
+								<button class="article__play-button" type="button">
+									<img
+										src="images/play-icon.svg"
+										width="24"
+										height="24"
+										alt="Запуск"
+									/>
+								</button>
 
-.button:hover {
-	opacity: 0.85;
-}
+								<img
+									class="article__image article-img article__margin-bottom-2 article__img"
+									src="./images/gym-img.jpg"
+									width="1220"
+									height="512"
+									alt="Тренажерный зал"
+								/>
 
-.button:not(:disabled):active {
-	background-color: var(--color-accent-active);
-}
+								<!-- <div class="article__decor article-decor article-decor-2"></div> -->
+							</div>
+						</div>
 
-.button:disabled {
-	opacity: 0.65;
-	cursor: default;
-}
+						<p class="article__text article-text">
+							Приглашаем всех желающих посетить новый филиал фитнес клуба
+							"FitLife" и начать заботиться о своем здоровье и фитнесе прямо
+							сейчас!
+						</p>
+					</div>
+				</section>
+			</article>
+		</main>
 
-.section {
-	margin-bottom: 80px;
-}
+		<footer class="footer">
+			<div class="footer__top">
+				<div class="container footer__container">
+					<a href="index.html" class="footer__logo logo">
+						<svg
+							class="logo__img logo_icon footer-logo_icon footer__logo-img"
+							aria-hidden="true"
+						>
+							<use href="images/main-logo.svg#icon-svg"></use>
+						</svg>
+					</a>
 
-.section:last-of-type {
-	margin-bottom: 0;
-}
+					<nav class="footer__nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item">
+								<a href="#" class="footer__nav-link">Клубы</a>
+							</li>
+							<li class="footer__nav-item">
+								<a href="#" class="footer__nav-link">Тренировки</a>
+							</li>
+							<li class="footer__nav-item">
+								<a href="#" class="footer__nav-link">Абонементы</a>
+							</li>
+							<li class="footer__nav-item">
+								<a href="#" class="footer__nav-link"> Программа лояльности </a>
+							</li>
+							<li class="footer__nav-item">
+								<a href="#" class="footer__nav-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 
-.title-large {
-	max-width: 596px;
-	margin-bottom: 40px;
-	font-family: var(--font-family), sans-serif;
-	font-weight: 600;
-	font-size: 48px;
-	line-height: 115%;
-	text-transform: uppercase;
-	color: var(--color-text-primary);
-}
-
-.title-medium {
-	font-family: var(--font-family);
-	font-weight: 500;
-	font-size: 24px;
-	line-height: 115%;
-	text-transform: uppercase;
-	color: var(--color-text-primary);
-}
-
-.text-sub {
-	color: var(--color-text-caption);
-	text-transform: uppercase;
-	font-weight: 300;
-	font-size: 14px;
-	letter-spacing: 0.04em;
-	margin-bottom: 8px;
-}
-
-a:focus-visible,
-button:focus-visible,
-summary:focus-visible {
-	outline: 2px solid var(--color-accent);
-	outline-offset: 1px;
-}
-
-.img-wrap {
-	position: relative;
-}
-
-/* === DECOR === */
-.article-decor-1::before {
-	content: "";
-	position: absolute;
-	background-image: url("../images/decor-2.svg");
-	background-repeat: repeat-x;
-	pointer-events: none;
-	height: 48px;
-	top: 100px;
-	right: 100%;
-	width: 100vw;
-}
-
-.article-decor-2::before {
-	content: "";
-	position: absolute;
-	background-image: url("../images/decor-2.svg");
-	background-repeat: repeat-x;
-	pointer-events: none;
-	height: 48px;
-	top: 186px;
-	left: 100%;
-	width: 100vw;
-}
-
-@media (width <= 1440px) {
-	.container {
-		max-width: 1200px;
-	}
-}
-
-@media (width <= 1200px) {
-	.container {
-		max-width: 992px;
-	}
-}
-
-@media (width <= 992px) {
-	.container {
-		max-width: 768px;
-	}
-}
-
-@media (width <= 768px) {
-	.container {
-		max-width: 576px;
-	}
-
-	.title-large {
-		font-size: 40px;
-		margin-bottom: 30px;
-	}
-
-	.home-page .title-large {
-		max-width: inherit;
-		text-align: center;
-	}
-
-	.title-medium {
-		font-size: 22px;
-	}
-}
-
-@media (width <= 576px) {
-	.section {
-		margin-bottom: 80px;
-	}
-
-	.title-large {
-		font-size: 32px;
-	}
-
-	.title-medium {
-		font-size: 22px;
-	}
-
-	.page-home main {
-		padding-bottom: 80px;
-	}
-
-	.page-article main {
-		padding-top: 60px;
-		padding-bottom: 80px;
-	}
-}
+			<div class="footer__bottom footer-inner-bottom">
+				<div class="container">
+					<p class="footer__copy">&COPY; Copyright. Все права защищены</p>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
