@@ -78,7 +78,7 @@
 }
 
 /* === NEWS === */
-.news__slider {
+.news__wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -270,7 +270,7 @@ details > p {
 		margin-bottom: 40px;
 	}
 
-	.news__slider {
+	.news__wrapper {
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
 		-webkit-box-pack: center;
@@ -289,7 +289,7 @@ details > p {
 		width: 100%;
 	}
 
-	.article-decor::before {
+	.article-decor-1::before {
 		display: none;
 	}
 
@@ -309,7 +309,7 @@ details > p {
 		overflow: hidden;
 	}
 
-	.article-decor {
+	.article-decor-1 {
 		display: none;
 	}
 
