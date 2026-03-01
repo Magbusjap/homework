@@ -170,23 +170,26 @@ summary:focus-visible {
 }
 
 /* === DECOR === */
-.article-decor {
+.article-decor-1::before {
+	content: "";
 	position: absolute;
-	width: 200%;
-	height: 48px;
 	background-image: url("../images/decor-2.svg");
 	background-repeat: repeat-x;
 	pointer-events: none;
-}
-
-.article-decor-1 {
+	height: 48px;
 	top: 100px;
 	right: 100%;
 	width: 100vw;
 }
 
-.article-decor-2 {
-	top: 136px;
+.article-decor-2::before {
+	content: "";
+	position: absolute;
+	background-image: url("../images/decor-2.svg");
+	background-repeat: repeat-x;
+	pointer-events: none;
+	height: 48px;
+	top: 186px;
 	left: 100%;
 	width: 100vw;
 }
