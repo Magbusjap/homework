@@ -6,6 +6,7 @@
 	padding-block: 32px;
 	background-color: var(--bg-color);
 	z-index: var(--layer-1);
+	transition: box-shadow var(--transition-time);
 }
 
 .header--fixed {
@@ -17,6 +18,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	margin-top: 8px;
+}
+
+@media (width <= 992px) {
+	.header__container {
+		margin-left: 18px;
+		padding-right: 3px;
+	}
 }
 
 @media (width > 768px) {
@@ -44,6 +53,7 @@
 		min-width: 297px;
 		padding-top: 144px;
 		padding-right: 15px;
+		padding-left: 15px;
 		background-color: var(--bg-color);
 		box-shadow: -2px 0 20px 0 var(--shadow-color);
 		opacity: 0;
@@ -62,6 +72,7 @@
 
 	.header__menu .menu__list {
 		flex-direction: column;
+		gap: 27px;
 		align-items: flex-end;
 		text-align: end;
 	}
