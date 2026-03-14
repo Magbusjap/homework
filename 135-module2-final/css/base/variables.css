@@ -1,0 +1,31 @@
+:root {
+	/* === FONT FAMILY === */
+	--first-font-family: "Readex Pro", sans-serif;
+	--second-font-family: "Inter", sans-serif;
+	--font-weight-regular: 400;
+
+	/* === COLORS === */
+	--color-main: #000000;
+	--color-secondary: #666666;
+	--color-bg: #ffffff;
+	--color-bg-hero: #eff4f2;
+	--color-bg-card: #f5f5f5;
+	--color-border: #e5e5e5;
+	--color-accent: #111111;
+	--color-hover: #333333;
+	--color-best-around: #f8f9fa;
+	--color-border-search: #c5c5c5;
+	--color-newsletter: #dce5e2;
+
+	/* === CONTAINER === */
+	--container-width: 1294px;
+	--container-padding: 20px;
+
+	/* === TRANSITIONS === */
+	--transition-time: 0.3s;
+
+	/* === LAYERS === */
+	--layer-1: 1;
+	--layer-2: 2;
+	--layer-3: 3;
+}

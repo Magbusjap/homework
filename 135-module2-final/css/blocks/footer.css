@@ -1,0 +1,194 @@
+.footer {
+	padding-top: 80px;
+	border-top: 1px solid var(--color-border);
+	background-color: var(--color-best-around);
+}
+
+.footer__top {
+	display: grid;
+	grid-template-columns: 2fr repeat(4, 1fr);
+	gap: 40px;
+	padding-bottom: 64px;
+}
+
+/* === BRAND === */
+.footer__brand {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__logo {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+}
+
+.footer__brand-text {
+	font-family: var(--second-font-family);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-main);
+	font-size: 16px;
+	line-height: 19.2px;
+	max-width: 310px;
+}
+
+/* === NAV COLUMNS === */
+.footer__nav-column {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.footer__nav-title {
+	font-family: var(--first-font-family);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-main);
+	text-align: left;
+	font-size: 22px;
+	line-height: 27.5px;
+}
+
+.footer__nav-list {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.footer__nav-link {
+	display: inline-block;
+	position: relative;
+	font-family: var(--second-font-family);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-main);
+	font-size: 17px;
+	line-height: 21.6px;
+	text-align: left;
+	-webkit-transition:
+		color var(--transition-time),
+		-webkit-transform var(--transition-time);
+	transition:
+		color var(--transition-time),
+		transform var(--transition-time);
+}
+
+.footer__nav-link::after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: currentColor;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: right;
+	-ms-transform-origin: right;
+	transform-origin: right;
+	-webkit-transition: -webkit-transform var(--transition-time);
+	transition: transform var(--transition-time);
+}
+
+/* === HOVER BUTTON === */
+@media (any-hover: hover) {
+	.footer__nav-link:hover {
+		color: var(--color-secondary);
+	}
+	.footer__nav-link:hover::after {
+		-webkit-transform: scaleX(1);
+		-ms-transform: scaleX(1);
+		transform: scaleX(1);
+		-webkit-transform-origin: left;
+		-ms-transform-origin: left;
+		transform-origin: left;
+	}
+}
+
+/* === BOTTOM === */
+.footer__bottom {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-block: 20px;
+	border-top: 1px solid var(--color-border);
+}
+
+.footer__made-by {
+	display: -webkit-inline-flex;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	font-family: var(--second-font-family);
+	font-weight: var(--font-weight-regular);
+	color: var(--color-main);
+	gap: 6px;
+	font-size: 18px;
+	line-height: 21.6px;
+	-webkit-transition: color var(--transition-time);
+	transition: color var(--transition-time);
+}
+
+/* === HOVER BUTTON === */
+@media (any-hover: hover) {
+	.footer__made-by:hover {
+		color: var(--color-main);
+	}
+}
+
+.footer__made-by-icon {
+	stroke: currentColor;
+}
+
+@media (width <= 992px) {
+	.footer__top {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+
+	.footer__brand {
+		grid-column: 1 / -1;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		text-align: center;
+	}
+
+	.footer__nav-column {
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	}
+
+	.footer__nav-title,
+	.footer__nav-link {
+		text-align: center;
+	}
+
+	.footer__made-by {
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
