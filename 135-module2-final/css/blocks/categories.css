@@ -99,6 +99,7 @@
 	height: 367px;
 	top: calc(50% - 251.99px);
 	object-fit: cover;
+	overflow: visible;
 }
 
 .categories__card--phones-right .categories__card-image {
@@ -108,6 +109,7 @@
 	right: -11.9%;
 	top: calc(50% - 133.85px);
 	object-fit: cover;
+	overflow: visible;
 }
 
 /* === CARD HOVER WHOLE CARD MOVES === */
