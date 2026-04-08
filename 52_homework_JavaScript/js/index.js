@@ -1,101 +1,89 @@
 //----------------------------
-// Задача 1.
-// Создайте объект person с несколькими свойствами, содержащими информацию о вас. Затем выведите значения этих свойств в консоль.
+// Задание 1.
+// Дан массив пользователей:
+// const users = [
+//   { name: 'Alex', age: 24, isAdmin: false },
+//   { name: 'Bob', age: 13, isAdmin: false },
+//   { name: 'John', age: 31, isAdmin: true },
+//   { name: 'Jane', age: 20, isAdmin: false },
+//
+// Добавьте в конец массива двух пользователей:
+// { name: 'Ann', age: 19, isAdmin: false },
+// { name: 'Jack', age: 43, isAdmin: true }
 //----------------------------
 
-const person = {
-	name: "",
-	age: "",
-	role: "",
-	isLearning: true,
-};
+console.log("Задание 1");
+const users = [
+	{ name: "Alex", age: 24, isAdmin: false },
+	{ name: "Bob", age: 13, isAdmin: false },
+	{ name: "John", age: 31, isAdmin: true },
+	{ name: "Jane", age: 20, isAdmin: false },
+];
 
-const personName = prompt("Как тебя зовут? ");
-const personAge = prompt("Сколько вам лет? ");
-const personRole = prompt("Какая у вас роль? ");
+console.log(users);
 
-person.name = personName;
-person.age = personAge;
-person.role = personRole;
+users.push(
+	{ name: "Ann", age: 19, isAdmin: false },
+	{ name: "Jack", age: 43, isAdmin: true },
+);
 
-console.log(person);
-
-//----------------------------
-// Задача 2.
-// Создайте функцию isEmpty, которая проверяет является ли переданный объект пустым. Если объект пуст - верните true, в противном случае false.
-//----------------------------
-
-function isEmpty(object) {
-	for (let obj in object) {
-		return false;
-	}
-	return true;
-}
-// Проверка:
-console.log(isEmpty({}));
-console.log(isEmpty({ имя: "Арокен" }));
+console.log(users);
 
 //----------------------------
-// Задача 3.
-// Создайте объект task с несколькими свойствами: title, description, isCompleted.
-// Напишите функцию cloneAndModify(object, modifications), которая с помощью оператора spread создает копию объекта и применяет изменения
-// из объекта modifications.
-// Затем с помощью цикла for in выведите все свойства полученного объекта.
+// Задание 2.
+// Используя массив пользователей users из предыдущего задания, напишите функцию getUserAverageAge(users),
+// которая возвращает средний возраст пользователей.
 //----------------------------
 
-const task = {
-	title: "Выучить JavaScript",
-	description: "Пройти модуль по объектам",
-	isCompleted: false,
-};
+console.log("Задание 2");
+function getUserAverageAge(users) {
+	if (users.length === 0) return 0;
 
-function cloneAndModify(object, modifications) {
-	return { ...object, ...modifications };
-}
-const updatedTask = cloneAndModify(task, {
-	isCompleted: true,
-	priority: "Высокий",
-});
+	let totalAge = 0;
+	users.forEach(function (user) {
+		totalAge += user.age;
+	});
 
-for (let key in updatedTask) {
-	console.log(`${key}: ${updatedTask[key]}`);
+	return totalAge / users.length;
 }
 
-//----------------------------
-// Задача 4.
-// Создайте функцию callAllMethods, которая принимает объект и вызывает все его методы.
+console.log(`Средний возраст пользователей: ${getUserAverageAge(users)}`);
 
-// Пример использования:
-// const myObject = {
-//     method1() {
-//         console.log('Метод 1 вызван');
-//     },
-//     method2() {
-//         console.log('Метод 2 вызван');
-//     },
-//     property: 'Это не метод'
-// };
-// callAllMethods(myObject);
+//----------------------------
+// Задание 3.
+// Используя массив пользователей users из предыдущего задания, напишите функцию getAllAdmins(users),
+// которая возвращает массив всех администраторов.
 //----------------------------
 
-const callAllMethods = (obj) => {
-	for (let key in obj) {
-		if (typeof obj[key] === "function") {
-			obj[key]();
-		} else {
-			console.log(`Свойство ${key}: ${obj[key]}`);
+console.log("Задание 3");
+function getAllAdmins(users) {
+	const admins = [];
+	users.forEach(function (user) {
+		if (user.isAdmin) {
+			admins.push(user);
 		}
+	});
+	return admins;
+}
+
+const admins = getAllAdmins(users);
+console.log(admins);
+
+//----------------------------
+// Задание 4.
+// Напишите функцию first(arr, n), которая возвращает первые n элементов массива. Если n == 0, возвращается пустой массив [],
+// если n == undefined, то возвращается массив с первым элементом.
+//----------------------------
+
+console.log("Задание 4");
+function first(arr, n = 1) {
+	const result = [];
+	for (let i = 0; i < n; i++) {
+		result.push(arr[i]);
 	}
-};
+	return result;
+}
 
-const myObject = {
-	method1() {
-		console.log("Метод 1 пошел");
-	},
-	method2() {
-		console.log("Метод 2 пошел");
-	},
-	property: "Я просто строка",
-};
-
-callAllMethods(myObject);
+console.log(first([1, 2, 3], 2));
+console.log(first([1, 2, 3], 0));
+console.log(first([1, 2, 3]));
